@@ -73,20 +73,20 @@ export const skills = [
 export const projects = [
   {
     icon: "🎯",
-    name: "Task-of-Web",
+    name: "Regex-Engine",
     description:
-      "A collection of front-end tasks and challenges demonstrating mastery of CSS layouts, Flexbox, Grid, and responsive design patterns from real-world UI scenarios.",
+      "Regex Engine is a low-level implementation of a regular expression processing engine written in C++, designed to demonstrate how regex pattern matching works internally. Instead of relying on built-in regex libraries, this project builds the matching system from scratch using finite automata concepts.",
     stack: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/Raslan07/Task-of-Web",
+    github: "https://github.com/Raslan07/Regex-Engine",
     live: null,
   },
   {
     icon: "📝",
-    name: "TypeScript Notes",
+    name: "Algorithms-Visualizer",
     description:
-      "Comprehensive TypeScript learning notes and code examples covering types, interfaces, generics, decorators, and advanced patterns with practical HTML demos.",
-    stack: ["TypeScript", "HTML"],
-    github: "https://github.com/Raslan07/typescript",
+      "Comprehensive Python Project for visualizer",
+    stack: ["Python","NumPY" , "Matplotlib"],
+    github: "https://github.com/Raslan07/Algorithms-Visualizer",
     live: null,
   },
   {
@@ -100,11 +100,11 @@ export const projects = [
   },
   {
     icon: "⚔️",
-    name: "CSS Battles",
+    name: "Github-Finder",
     description:
-      "Creative CSS challenge solutions — recreating complex visual designs with minimal markup using advanced CSS properties, pseudo-elements, and clever tricks.",
-    stack: ["CSS", "HTML", "Creative CSS"],
-    github: "https://github.com/Raslan07/CssBattels",
+      "GitHub Finder is a web application that allows users to search for GitHub profiles and explore developer information using the GitHub API. By simply entering a GitHub username, the application fetches and displays key details about the user, including their profile information and repositories.",
+    stack: ["CSS", "HTML", "Javascript"],
+    github: "https://github.com/Raslan07/Github-Finder",
     live: null,
   },
   {
