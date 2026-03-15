@@ -1,0 +1,23 @@
+
+> raslan-portfolio@0.1.0 build
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.1s
+  Running TypeScript ...
+Failed to compile.
+
+./components/sections/HeroSection.tsx:135:13
+Type error: Type '{ children: string; as: "button"; onClick: () => void; className: string; style: CSSProperties; }' is not assignable to type 'IntrinsicAttributes & MagneticButtonProps'.
+  Property 'style' does not exist on type 'IntrinsicAttributes & MagneticButtonProps'.
+
+[0m [90m 133 |[39m             onClick[33m=[39m{() [33m=>[39m scrollTo([32m"projects"[39m)}
+ [90m 134 |[39m             className[33m=[39m[32m"inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-mono text-sm tracking-wider text-white font-medium transition-all duration-200"[39m
+[31m[1m>[22m[39m[90m 135 |[39m             style[33m=[39m{{
+ [90m     |[39m             [31m[1m^[22m[39m
+ [90m 136 |[39m               background[33m:[39m [32m"var(--accent)"[39m[33m,[39m
+ [90m 137 |[39m               boxShadow[33m:[39m [32m"0 0 30px rgba(108,99,255,0.35)"[39m[33m,[39m
+ [90m 138 |[39m             } [36mas[39m [33mReact[39m[33m.[39m[33mCSSProperties[39m}[0m
+Next.js build worker exited with code: 1 and signal: null

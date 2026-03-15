@@ -12,6 +12,7 @@ interface MagneticButtonProps {
   as?: "button" | "a";
   target?: string;
   rel?: string;
+  style?: React.CSSProperties;
 }
 
 export function MagneticButton({
@@ -23,6 +24,7 @@ export function MagneticButton({
   as = "button",
   target,
   rel,
+  style,
 }: MagneticButtonProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -48,7 +50,7 @@ export function MagneticButton({
   return (
     <div ref={ref} onMouseMove={onMouseMove} onMouseLeave={onMouseLeave} className="inline-block">
       <Tag
-        style={{ x, y }}
+        style={{ ...style, x, y }}
         className={className}
         onClick={onClick}
         {...(as === "a" ? { href, target, rel } : {})}
