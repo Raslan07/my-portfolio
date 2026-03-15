@@ -10,24 +10,31 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
       try {
         const LenisModule = await import("lenis");
         const Lenis = LenisModule.default;
+
         lenis = new Lenis({
           duration: 1.4,
           easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           smoothWheel: true,
         });
 
-        function raf(time: number) {
+        const raf = (time: number) => {
           lenis.raf(time);
           requestAnimationFrame(raf);
-        }
+        };
+
         requestAnimationFrame(raf);
       } catch {
-        // lenis not available, fallback to native scroll
+        // Lenis not available, fallback to native scroll
       }
     };
 
     init();
-    return () => lenis?.destroy();
+
+    return () => {
+      if (lenis) {
+        lenis.destroy();
+      }
+    };
   }, []);
 
   return <>{children}</>;
